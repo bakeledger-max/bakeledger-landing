@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeLedger | Fastest Bakery POS in Kerala | starts Free!</title>
+    <meta name="description" content="Manage your bakery billing, recipes, inventory, and GST compliance with the fastest POS built for Kerala bakeries. Try Free via WhatsApp.">
+    
+    <!-- Essential Meta Tags for Social Media (OG) -->
+    <meta property="og:title" content="BakeLedger | Fastest Bakery POS in Kerala">
+    <meta property="og:description" content="Instant touch billing, recipe management, and GST reports. Start your free trial via WhatsApp now.">
+    <meta property="og:url" content="https://bakeledger.in">
+    <meta property="og:type" content="website">
+	<link rel="icon" type="image/png" href="favicon.png">
+	
+    <!-- Tailwind CSS (CDN for zero-config startup) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF', // Deep Blue
+                        secondary: '#25D366', // Official WhatsApp Green
+                        dark: '#111827',
+                        light: '#F3F4F6'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+        
+        /* Floating WhatsApp Button for Mobile */
+        .whatsapp-sticky-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+        }
+
+        @media (max-width: 640px) {
+            .whatsapp-sticky-bar {
+                display: flex;
+            }
+            body { padding-bottom: 70px; } /* Add padding so footer content isn't covered */
+        }
+		
+		/* BakeLedger Exact Brand Styling */
+		.brand-bake {
+			font-weight: 800;
+			font-size: 1.5rem;
+			color: #4b2c20; /* Dark Brown */
+			letter-spacing: -0.5px;
+		}
+
+		.brand-ledger {
+			font-weight: 300; /* Light/Slim weight */
+			font-size: 1.5rem;
+			color: #4b2c20; /* Dark Brown */
+		}
+    </style>
+</head>
+<body class="font-sans antialiased text-dark bg-white">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-40 border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+           <a href="#" class="flex items-center">
+			<span class="brand-bake">Bake</span><span class="brand-ledger">Ledger</span>
+                <!-- <span class="text-2xl font-bold text-primary">BakeLedger</span> -->
+            </a>
+            
+            <div class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+                <a href="#features" class="hover:text-primary">Features</a>
+                <a href="#pricing" class="hover:text-primary">Pricing</a>
+                <a href="#about" class="hover:text-primary">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <a href="https://app.bakeledger.in" class="text-sm font-semibold text-primary px-4 py-2 rounded-full border border-primary hover:bg-gray-50">
+                    Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Optimized for Mobile Hook) -->
+    <section class="bg-light py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Hero Left (Content) -->
+            <div class="text-center md:text-left space-y-6">
+                <!-- Malayalam Headline Teaser -->
+                <h1 class="text-4xl md:text-5xl font-extrabold text-dark leading-tight">
+                    The <span class="text-primary">Fastest</span> Billing & ERP Built for Modern Bakeries
+                </h1>
+                <p class="text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+                    Manage fresh items, barcode scanning, recipes, inventory, and GST compliance—all from one lightning-fast platform.
+                </p>
+                
+                <!-- Primary Action (WhatsApp Hook) -->
+                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <!-- 👇 EDIT THIS LINE: CHANGE 910000000000 TO YOUR WHATSAPP BUSINESS NUMBER -->
+                    <a href="https://wa.me/919846225878?text=Hi%20BakeLedger,%20I%20want%20to%20get%20a%20quick%20free%20demo%20for%20my%20bakery!" 
+                       target="_blank"
+                       class="flex items-center justify-center gap-2.5 bg-secondary text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        <span>Request Free Demo on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Right (Image Placeholder) -->
+            <div class="relative flex justify-center md:justify-end">
+                <!-- Replace with your actual dashboard screenshot later -->
+                <img src="hero-mockup.png" 
+                     alt="BakeLedger POS Dashboard on Tablet and Mobile" 
+                     class="w-full max-w-md rounded-2xl shadow-2xl border-[10px] border-white ring-1 ring-gray-100">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5 space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-xs uppercase font-bold text-primary tracking-widest">Bakery First Features</h2>
+                <p class="text-3xl md:text-4xl font-extrabold text-dark mt-3">Built for Speed and Accuracy</p>
+                <p class="text-lg text-gray-600 mt-4">We understand your rush hours. BakeLedger keeps your billing moving instantly.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
+                <!-- Feature 1: Lightning Fast Billing -->
+                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold">Lightning-Fast Billing</h3>
+                    <p class="text-gray-600">Sell puffs, cakes, and cutlets in two taps. Dual-mode support for fresh counter items and packaged goods with barcodes.</p>
+                </div>
+                
+                <!-- Feature 2: Barcode Support -->
+                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        🔌
+                    </div>
+                    <h3 class="text-xl font-bold">Hardware Barcode Ready</h3>
+                    <p class="text-gray-600">Plug in any standard USB or Bluetooth scanner and start billing immediately. No complex configuration required.</p>
+                </div>
+                
+                <!-- Feature 3: GSTR Reports -->
+                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-bold">GST & Analytics</h3>
+                    <p class="text-gray-600">Generate clean GSTR-1 reports instantly. Track your best-selling items, peaks hours, and profit margins with detailed analytics.</p>
+                </div>
+                
+                 <!-- Feature 4: Recipes -->
+                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        🥐
+                    </div>
+                    <h3 class="text-xl font-bold">Recipe & Production Control (Pro)</h3>
+                    <p class="text-gray-600">Manage raw material inventory, recipe costs, and automatic stock deductions based on production schedules.</p>
+                </div>
+                
+                <!-- Feature 5: Security -->
+                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        🔒
+                    </div>
+                    <h3 class="text-xl font-bold">Secure Cloud Access</h3>
+                    <p class="text-gray-600">Your data is secured on the cloud. Check your daily reports from home or your mobile phone anytime, anywhere.</p>
+                </div>
+                
+                <!-- Feature 6: Localized -->
+                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        🌴
+                    </div>
+                    <h3 class="text-xl font-bold">Made for Kerala SMBs</h3>
+                    <p class="text-gray-600">The platform logic is optimized for typical Indian bakery operations—credit handling, advanced bookings, and localized reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-5 space-y-12">
+            <div class="text-center max-w-2xl mx-auto">
+                <p class="text-xs uppercase font-bold text-primary tracking-widest">Simple Plans</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dark mt-3">Get Started for ₹0/Month</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-start">
+                
+                <!-- Plan 1: Free Tier -->
+                <div class="bg-white p-10 rounded-3xl space-y-6 shadow-xl border border-gray-100">
+                    <h3 class="text-2xl font-bold">Free Tier</h3>
+                    <p class="text-gray-600">Ideal for small bakeries just starting out.</p>
+                    <div class="text-5xl font-extrabold">₹0 <span class="text-base font-normal text-gray-500">/mo forever</span></div>
+                    
+                    <ul class="space-y-4 pt-4 text-gray-700">
+                        <li>✅ Unlimited Basic Billing</li>
+                        <li>✅ Barcode Scanner Support</li>
+                        <li>✅ Thermal & PDF Receipts</li>
+                        <li>❌ No Recipe Management</li>
+                        <li>❌ Basic Reports Only</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/910000000000?text=Hi%20BakeLedger,%20I'd%20like%20to%20sign%20up%20for%20the%20Free%20Tier." 
+                       target="_blank"
+                       class="block w-full text-center bg-gray-100 text-gray-800 font-semibold px-6 py-3.5 rounded-full hover:bg-gray-200">
+                        Activate Free Plan
+                    </a>
+                </div>
+                
+                <!-- Plan 2: Pro Tier -->
+                <div class="bg-primary p-10 rounded-3xl space-y-6 shadow-2xl text-white scale-[1.03] md:scale-105 border-[6px] border-white ring-2 ring-primary/20">
+                    <h3 class="text-2xl font-bold">Pro Tier (Growth)</h3>
+                    <p class="text-blue-100">For active bakeries needing full control.</p>
+                    <div class="text-5xl font-extrabold">₹Premium <span class="text-base font-normal text-blue-100">/mo (Ask for Price)</span></div>
+                    
+                    <ul class="space-y-4 pt-4 text-blue-50">
+                        <li>✅ Everything in Free Tier</li>
+                        <li>✅ Recipe & Batch Production</li>
+                        <li>✅ Raw Material Inventory</li>
+                        <li>✅ Advanced GSTR-1 Analytics</li>
+                        <li>✅ Multi-User Account Management</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/919846225878?text=Hi%20BakeLedger,%20I'm%20interested%20in%20pricing%20for%20the%20Pro%20Tier." 
+                       target="_blank"
+                       class="block w-full text-center bg-white text-primary font-bold px-6 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">
+                        Request Pro Pricing
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / About -->
+    <footer id="about" class="bg-white border-t border-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-5 text-center text-gray-600 space-y-4">
+            <div>
+				<span class="brand-bake">Bake</span><span class="brand-ledger">Ledger</span>
+			</div>
+            <p>Made in Kerala, India 🌴</p>
+            <p>Questions? Chat with us directly on WhatsApp: <a href="https://wa.me/919846225878" target="_blank" class="font-semibold text-primary hover:underline">919846225878</a></p>
+            <p class="text-sm pt-4">&copy; <span id="year"></span> BakeLedger. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 📱 Mobile-only Sticky WhatsApp Hook Bar -->
+    <div class="whatsapp-sticky-bar bg-light p-3 border-t border-gray-200">
+        <a href="https://wa.me/919846225878?text=Hi%20BakeLedger,%20I'm%20on%20my%20mobile%20and%20want%20a%20free%20trial!" 
+           target="_blank"
+           class="flex items-center justify-center gap-2.5 bg-secondary text-white font-bold w-full p-4 rounded-xl text-lg shadow-lg">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            <span>Start Free Trial</span>
+        </a>
+    </div>
+
+    <!-- Small Script to Update Copyright Year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
