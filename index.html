@@ -14,7 +14,22 @@
 	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="preload" as="image" href="hero-mockup.webp" type="image/webp">
 	
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS (CDN for zero-config startup) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF', // Deep Blue
+                        secondary: '#25D366', // Official WhatsApp Green
+                        dark: '#111827',
+                        light: '#F3F4F6'
+                    }
+                }
+            }
+        }
+    </script>
     
     <style>
         /* Smooth scrolling for anchor links */
