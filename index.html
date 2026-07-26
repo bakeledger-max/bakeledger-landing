@@ -12,6 +12,7 @@
     <meta property="og:url" content="https://bakeledger.in">
     <meta property="og:type" content="website">
 	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="preload" as="image" href="hero-mockup.webp" type="image/webp">
 	
     <!-- Tailwind CSS (CDN for zero-config startup) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -119,9 +120,11 @@
             <!-- Hero Right (Image Placeholder) -->
             <div class="relative flex justify-center md:justify-end">
                 <!-- Replace with your actual dashboard screenshot later -->
-                <img src="hero-mockup.png" 
-                     alt="BakeLedger POS Dashboard on Tablet and Mobile" 
-                     class="w-full max-w-md rounded-2xl shadow-2xl border-[10px] border-white ring-1 ring-gray-100">
+                <img src="hero-mockup.webp" 
+					 alt="BakeLedger POS Dashboard on Tablet and Mobile" 
+					 width="800" height="400"
+					 fetchpriority="high"
+					 class="w-full max-w-md rounded-2xl shadow-2xl border-[10px] border-white ring-1 ring-gray-100">
             </div>
         </div>
     </section>
