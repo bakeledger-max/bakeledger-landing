@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BakeLedger | Fastest Bakery POS in Kerala | Starts Free!</title>
-    <meta name="description" content="Manage your bakery billing, recipes, inventory, and GST compliance with the fastest POS built for Kerala bakeries. Try Free instantly.">
+    <title>BakeLedger | Complete Bakery Billing, Accounting & POS | Starts Free</title>
+    <meta name="description" content="Manage bakery touch billing, customer credit ledgers, supplier accounts, cash receipts, cash payments, journal entries, and GST reports.">
     
-    <!-- Essential Meta Tags for Social Media (OG) -->
-    <meta property="og:title" content="BakeLedger | Fastest Bakery POS in Kerala">
-    <meta property="og:description" content="Instant touch billing, recipe management, and GST reports. Start your free account instantly.">
+    <!-- Essential Meta Tags -->
+    <meta property="og:title" content="BakeLedger | Complete Bakery Billing & Accounting POS">
+    <meta property="og:description" content="Instant touch billing, voucher entries, customer credit accounting, and GST reports built for bakeries.">
     <meta property="og:url" content="https://bakeledger.in">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preload" as="image" href="hero-mockup.webp" type="image/webp">
     
-    <!-- Tailwind CSS (CDN for zero-config startup) -->
+    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,7 +21,6 @@
                 extend: {
                     colors: {
                         primary: '#1E40AF', // Deep Blue
-                        secondary: '#25D366', // Official WhatsApp Green
                         dark: '#111827',
                         light: '#F3F4F6'
                     }
@@ -32,42 +30,21 @@
     </script>
     
     <style>
-        /* Smooth scrolling for anchor links */
         html { scroll-behavior: smooth; }
         
-        /* Floating WhatsApp Button for Mobile */
-        .whatsapp-sticky-bar {
+        .brand-bake { font-weight: 800; font-size: 1.5rem; color: #4b2c20; }
+        .brand-ledger { font-weight: 300; font-size: 1.5rem; color: #4b2c20; }
+
+        .modal-backdrop {
             display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 50;
+            background-color: rgba(0, 0, 0, 0.6);
         }
-
-        @media (max-width: 640px) {
-            .whatsapp-sticky-bar {
-                display: flex;
-            }
-            body { padding-bottom: 70px; } /* Add padding so footer content isn't covered */
-        }
-        
-        /* BakeLedger Exact Brand Styling */
-        .brand-bake {
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: #4b2c20; /* Dark Brown */
-            letter-spacing: -0.5px;
-        }
-
-        .brand-ledger {
-            font-weight: 300; /* Light/Slim weight */
-            font-size: 1.5rem;
-            color: #4b2c20; /* Dark Brown */
+        .modal-backdrop.active {
+            display: flex;
         }
     </style>
 </head>
-<body class="font-sans antialiased text-dark bg-white">
+<body class="font-sans antialiased text-dark bg-white flex flex-col min-h-screen">
 
     <!-- Header / Navbar -->
     <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-40 border-b border-gray-100">
@@ -77,9 +54,10 @@
             </a>
             
             <div class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
-                <a href="#features" class="hover:text-primary">Features</a>
-                <a href="#pricing" class="hover:text-primary">Pricing</a>
-                <a href="#about" class="hover:text-primary">Contact</a>
+                <a href="#features" class="hover:text-primary transition-colors">Features</a>
+                <a href="#accounting" class="hover:text-primary transition-colors">Accounting</a>
+                <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
             </div>
             
             <div class="flex items-center gap-3">
@@ -93,192 +71,349 @@
         </nav>
     </header>
 
-    <!-- Hero Section (Optimized for Mobile Hook) -->
-    <section class="bg-light py-16 md:py-24">
-        <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-light py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Hero Left -->
+                <div class="text-center md:text-left space-y-6">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-dark leading-tight">
+                        Touch Billing & Complete <span class="text-primary">Bakery Accounting</span> Software
+                    </h1>
+                    <p class="text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+                        From rapid rush-hour billing to tracking customer credit, supplier payouts, cash receipts, and GST filings—all features included free for up to 10 bills per day.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                        <a href="https://app.bakeledger.in/signup" 
+                           class="flex items-center justify-center gap-2 bg-primary text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:bg-blue-800 hover:scale-[1.02] transition-all w-full sm:w-auto">
+                            <span>Start Free Account</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-500 text-center md:text-left">Instant setup • No credit card required</p>
+                </div>
+                
+                <!-- Hero Right -->
+                <div class="relative flex justify-center md:justify-end">
+                    <img src="hero-mockup.webp" 
+                         alt="BakeLedger Touch POS Billing Interface" 
+                         width="800" height="400"
+                         fetchpriority="high"
+                         class="w-full max-w-md rounded-2xl shadow-2xl border-[10px] border-white ring-1 ring-gray-100">
+                </div>
+            </div>
+        </section>
+
+        <!-- POS & Billing Features Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-5 space-y-12">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-xs uppercase font-bold text-primary tracking-widest">Speed & Efficiency</h2>
+                    <p class="text-3xl md:text-4xl font-extrabold text-dark mt-3">Designed for Counter Billing & Printing</p>
+                    <p class="text-lg text-gray-600 mt-4">Keep lines moving during peak hours while keeping track of every item sold.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
+                    <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">🖐️</div>
+                        <h3 class="text-xl font-bold">Touch Counter Billing</h3>
+                        <p class="text-gray-600">Tap item tiles organized by categories (Sweets, Puffs, Cakes, Drinks) or use quick keyboard shortcuts for instant billing.</p>
+                    </div>
+                    
+                    <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">🖨️</div>
+                        <h3 class="text-xl font-bold">Thermal Printing</h3>
+                        <p class="text-gray-600">Direct receipt printing via USB or Bluetooth thermal printers (58mm/80mm), plus digital WhatsApp receipt links.</p>
+                    </div>
+                    
+                    <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl">➕</div>
+                        <h3 class="text-xl font-bold">Quick Master Maintenance</h3>
+                        <p class="text-gray-600">Add products on the fly with custom sales rates, SGST, CGST, CESS percentages, categories, and item icons.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Accounting Section -->
+        <section id="accounting" class="py-20 bg-light border-t border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-5 space-y-12">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-xs uppercase font-bold text-primary tracking-widest">Built-In Financial Ledger</h2>
+                    <p class="text-3xl md:text-4xl font-extrabold text-dark mt-3">Complete Cash & Voucher Management</p>
+                    <p class="text-lg text-gray-600 mt-4">Handle customer credit accounts, track supplier dues, and manage daily cash flow effortlessly.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
+                    <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold text-xl">📥</div>
+                        <h3 class="text-xl font-bold">Cash Receipts (CR Vouchers)</h3>
+                        <p class="text-gray-600 text-sm">Record incoming customer payments against outstanding credit balances, advance sales, or daily cash settlements with voucher numbering.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-bold text-xl">📤</div>
+                        <h3 class="text-xl font-bold">Cash Payments (CP Vouchers)</h3>
+                        <p class="text-gray-600 text-sm">Track cash paid out to raw material suppliers, vendor bills, daily bakery expenses, and petty cash directly against ledgers.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xl">📓</div>
+                        <h3 class="text-xl font-bold">Journal Entries (Credit Sales)</h3>
+                        <p class="text-gray-600 text-sm">Log credit sale transactions, non-cash adjustments, and customer ledger debits to maintain accurate double-entry ledger accounts.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-yellow-100 text-yellow-800 flex items-center justify-center font-bold text-xl">👥</div>
+                        <h3 class="text-xl font-bold">Ledger Master & Schedules</h3>
+                        <p class="text-gray-600 text-sm">Organize accounts into Customer, Supplier, Expense, and Tax schedules with GSTIN tracking, addresses, and email details.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xl">📊</div>
+                        <h3 class="text-xl font-bold">Customer Outstanding Ledgers</h3>
+                        <p class="text-gray-600 text-sm">View real-time credit balances per customer, track pending invoice payments, and export ledger statements for credit collection.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xl">📑</div>
+                        <h3 class="text-xl font-bold">GST Outward & Tax Reports</h3>
+                        <p class="text-gray-600 text-sm">Generate GSTR-1 outward tax summaries, HSN summaries, and CGST, SGST, and CESS breakdowns ready for filing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transparent Pricing Section -->
+        <section id="pricing" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-5 space-y-12">
+                <div class="text-center max-w-2xl mx-auto">
+                    <p class="text-xs uppercase font-bold text-primary tracking-widest">Transparent Pricing</p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-dark mt-3">All Features Unlocked on Every Plan</h2>
+                    <p class="text-gray-600 mt-2">Get access to all POS, voucher entries, and ledger accounting tools. Upgrade only when you need more than 10 daily bills.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+                    
+                    <!-- Free Plan -->
+                    <div class="bg-light p-8 md:p-10 rounded-3xl space-y-6 border border-gray-200 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full uppercase">Full Features (Limited Volume)</span>
+                            <h3 class="text-2xl font-bold mt-3">Free Plan</h3>
+                            <p class="text-gray-600 text-sm mt-1">Ideal for testing or small bakery counters with low daily billing volume.</p>
+                            <div class="text-5xl font-extrabold mt-6">₹0 <span class="text-base font-normal text-gray-500">/month</span></div>
+                            
+                            <ul class="space-y-4 pt-6 text-gray-700 text-sm">
+                                <li class="flex items-center gap-2"><span>⚠️</span> <strong>Limited to 10 Sales Bills per day</strong></li>
+                                <li class="flex items-center gap-2"><span>✅</span> Full Touch POS Interface & Master Setup</li>
+                                <li class="flex items-center gap-2"><span>✅</span> Cash Receipts (CR) & Cash Payments (CP)</li>
+                                <li class="flex items-center gap-2"><span>✅</span> Journal Entries & Customer Credit Ledgers</li>
+                                <li class="flex items-center gap-2"><span>✅</span> USB & Bluetooth Thermal Printing</li>
+                                <li class="flex items-center gap-2"><span>✅</span> Day-End Summaries & All GST Reports</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-8 space-y-2">
+                            <a href="https://app.bakeledger.in/signup" 
+                               class="block w-full text-center bg-gray-900 text-white font-bold px-6 py-3.5 rounded-full hover:bg-black transition-colors">
+                                Start Free (10 Bills/Day)
+                            </a>
+                            <p class="text-xs text-gray-400 text-center">No payment required</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Starter Plan -->
+                    <div class="bg-primary p-8 md:p-10 rounded-3xl space-y-6 text-white border-[6px] border-white ring-2 ring-primary/20 flex flex-col justify-between relative overflow-hidden shadow-2xl">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-dark text-xs font-black px-3 py-1 rounded-full uppercase">
+                            Best Value
+                        </div>
+                        <div>
+                            <span class="bg-blue-700 text-blue-100 text-xs font-semibold px-3 py-1 rounded-full uppercase">Unlimited Volume</span>
+                            <h3 class="text-2xl font-bold mt-3">Starter Plan</h3>
+                            <p class="text-blue-100 text-sm mt-1">Identical full feature set with completely unlimited daily billing.</p>
+                            <div class="text-5xl font-extrabold mt-6">₹249 <span class="text-base font-normal text-blue-100">/month</span></div>
+                            
+                            <ul class="space-y-4 pt-6 text-blue-50 text-sm">
+                                <li class="flex items-center gap-2"><span>🚀</span> <strong>UNLIMITED Sales Bills per day</strong></li>
+                                <li class="flex items-center gap-2"><span>✅</span> Full Touch POS Interface & Master Setup</li>
+                                <li class="flex items-center gap-2"><span>✅</span> Cash Receipts (CR) & Cash Payments (CP)</li>
+                                <li class="flex items-center gap-2"><span>✅</span> Journal Entries & Customer Credit Ledgers</li>
+                                <li class="flex items-center gap-2"><span>✅</span> USB & Bluetooth Thermal Printing</li>
+                                <li class="flex items-center gap-2"><span>✅</span> Day-End Summaries & All GST Reports</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-8 space-y-2">
+                            <a href="https://app.bakeledger.in/signup" 
+                               class="block w-full text-center bg-white text-primary font-bold px-6 py-3.5 rounded-full shadow-lg hover:bg-blue-50 transition-all">
+                                Try Free & Upgrade Anytime
+                            </a>
+                            <p class="text-xs text-blue-100 text-center">Start on Free Plan • Upgrade in-app when ready</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-light border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-5">
+                <div class="bg-white p-8 md:p-12 rounded-3xl border border-gray-200 grid md:grid-cols-3 gap-8 shadow-sm">
+                    <div>
+                        <h3 class="text-xl font-bold text-dark">Need Help Getting Started?</h3>
+                        <p class="text-gray-600 text-sm mt-2">Create your free account online or contact us for assistance with account setup and thermal printer configuration.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm uppercase tracking-wider">Operating Details</h4>
+                        <p class="text-gray-600 text-sm mt-2">
+                            <strong>BakeLedger Technologies</strong><br>
+                            Alappuzha, Kerala, India - 688001
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm uppercase tracking-wider">Direct Support</h4>
+                        <p class="text-gray-600 text-sm mt-2">
+                            <strong>Email:</strong> support@bakeledger.in<br>
+                            <strong>Phone:</strong> +91 62381 30456<br>
+                            <strong>Working Hours:</strong> Mon - Sat (9:00 AM - 6:00 PM IST)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-sm">
             
-            <!-- Hero Left (Content) -->
-            <div class="text-center md:text-left space-y-6">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-dark leading-tight">
-                    The <span class="text-primary">Fastest</span> Billing & ERP Built for Modern Bakeries
-                </h1>
-                <p class="text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
-                    Manage fresh items, barcode scanning, recipes, inventory, and GST compliance—all from one lightning-fast platform.
+            <div class="space-y-3">
+                <div class="flex items-center">
+                    <span class="text-white font-extrabold text-xl">Bake</span><span class="text-gray-400 font-light text-xl">Ledger</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Cloud POS and complete ledger accounting software built for bakeries and confectionery businesses in India.
                 </p>
-                
-                <!-- Primary Actions -->
-                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="https://app.bakeledger.in/signup" 
-                       class="flex items-center justify-center gap-2 bg-primary text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:bg-blue-800 hover:scale-[1.02] transition-all">
-                        <span>Start Free Account</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-
-                    <a href="https://wa.me/916238130456?text=Hi%20BakeLedger,%20I%20want%20to%20get%20a%20quick%20free%20demo%20for%20my%20bakery!" 
-                       target="_blank"
-                       class="flex items-center justify-center gap-2.5 bg-secondary text-white font-bold px-6 py-4 rounded-full text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                        <span>WhatsApp Demo</span>
-                    </a>
-                </div>
+                <p class="text-xs text-gray-500">Made with ❤️ in Kerala, India 🌴</p>
             </div>
-            
-            <!-- Hero Right (Image Placeholder) -->
-            <div class="relative flex justify-center md:justify-end">
-                <img src="hero-mockup.webp" 
-                     alt="BakeLedger POS Dashboard on Tablet and Mobile" 
-                     width="800" height="400"
-                     fetchpriority="high"
-                     class="w-full max-w-md rounded-2xl shadow-2xl border-[10px] border-white ring-1 ring-gray-100">
+
+            <div class="space-y-2">
+                <h4 class="text-white font-semibold text-base mb-3">Quick Links</h4>
+                <p><a href="#features" class="hover:text-white transition-colors">POS Features</a></p>
+                <p><a href="#accounting" class="hover:text-white transition-colors">Vouchers & Accounting</a></p>
+                <p><a href="#pricing" class="hover:text-white transition-colors">Starter Plan Pricing</a></p>
+                <p><a href="https://app.bakeledger.in/login" class="hover:text-white transition-colors">Account Login</a></p>
+            </div>
+
+            <div class="space-y-2">
+                <h4 class="text-white font-semibold text-base mb-3">Legal & Policies</h4>
+                <p><button onclick="openModal('privacy-modal')" class="hover:text-white text-left transition-colors">Privacy Policy</button></p>
+                <p><button onclick="openModal('terms-modal')" class="hover:text-white text-left transition-colors">Terms & Conditions</button></p>
+                <p><button onclick="openModal('refund-modal')" class="hover:text-white text-left transition-colors">Refund & Cancellation Policy</button></p>
+            </div>
+
+            <div class="space-y-2">
+                <h4 class="text-white font-semibold text-base mb-3">Customer Support</h4>
+                <p class="text-xs"><strong>Email:</strong> support@bakeledger.in</p>
+                <p class="text-xs"><strong>Helpline:</strong> +91 62381 30456</p>
+                <p class="text-xs text-gray-500 mt-2">Payments securely processed via Razorpay Payment Gateway.</p>
             </div>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-5 space-y-12">
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-xs uppercase font-bold text-primary tracking-widest">Bakery First Features</h2>
-                <p class="text-3xl md:text-4xl font-extrabold text-dark mt-3">Built for Speed and Accuracy</p>
-                <p class="text-lg text-gray-600 mt-4">We understand your rush hours. BakeLedger keeps your billing moving instantly.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
-                <!-- Feature 1: Lightning Fast Billing -->
-                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        ⚡
-                    </div>
-                    <h3 class="text-xl font-bold">Lightning-Fast Billing</h3>
-                    <p class="text-gray-600">Sell puffs, cakes, and cutlets in two taps. Dual-mode support for fresh counter items and packaged goods with barcodes.</p>
-                </div>
-                
-                <!-- Feature 2: Barcode Support -->
-                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        🔌
-                    </div>
-                    <h3 class="text-xl font-bold">Hardware Barcode Ready</h3>
-                    <p class="text-gray-600">Plug in any standard USB or Bluetooth scanner and start billing immediately. No complex configuration required.</p>
-                </div>
-                
-                <!-- Feature 3: GSTR Reports -->
-                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        📊
-                    </div>
-                    <h3 class="text-xl font-bold">GST & Analytics</h3>
-                    <p class="text-gray-600">Generate clean GSTR-1 reports instantly. Track your best-selling items, peak hours, and profit margins with detailed analytics.</p>
-                </div>
-                
-                 <!-- Feature 4: Recipes -->
-                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        🥐
-                    </div>
-                    <h3 class="text-xl font-bold">Recipe & Production Control (Pro)</h3>
-                    <p class="text-gray-600">Manage raw material inventory, recipe costs, and automatic stock deductions based on production schedules.</p>
-                </div>
-                
-                <!-- Feature 5: Security -->
-                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        🔒
-                    </div>
-                    <h3 class="text-xl font-bold">Secure Cloud Access</h3>
-                    <p class="text-gray-600">Your data is secured on the cloud. Check your daily reports from home or your mobile phone anytime, anywhere.</p>
-                </div>
-                
-                <!-- Feature 6: Localized -->
-                <div class="bg-light p-8 rounded-2xl space-y-4 border border-gray-100">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        🌴
-                    </div>
-                    <h3 class="text-xl font-bold">Made for Kerala SMBs</h3>
-                    <p class="text-gray-600">The platform logic is optimized for typical Indian bakery operations—credit handling, advanced bookings, and localized reporting.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-light">
-        <div class="max-w-7xl mx-auto px-5 space-y-12">
-            <div class="text-center max-w-2xl mx-auto">
-                <p class="text-xs uppercase font-bold text-primary tracking-widest">Simple Plans</p>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-dark mt-3">Get Started for ₹0/Month</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-start">
-                
-                <!-- Plan 1: Free Tier -->
-                <div class="bg-white p-10 rounded-3xl space-y-6 shadow-xl border border-gray-100">
-                    <h3 class="text-2xl font-bold">Free Tier</h3>
-                    <p class="text-gray-600">Ideal for small bakeries just starting out.</p>
-                    <div class="text-5xl font-extrabold">₹0 <span class="text-base font-normal text-gray-500">/mo forever</span></div>
-                    
-                    <ul class="space-y-4 pt-4 text-gray-700">
-                        <li>✅ Unlimited Basic Billing</li>
-                        <li>✅ Barcode Scanner Support</li>
-                        <li>✅ Thermal & PDF Receipts</li>
-                        <li>❌ No Recipe Management</li>
-                        <li>❌ Basic Reports Only</li>
-                    </ul>
-                    
-                    <a href="https://app.bakeledger.in/signup" 
-                       class="block w-full text-center bg-primary text-white font-bold px-6 py-3.5 rounded-full hover:bg-blue-800 transition-colors">
-                        Sign Up Free Now
-                    </a>
-                </div>
-                
-                <!-- Plan 2: Pro Tier -->
-                <div class="bg-primary p-10 rounded-3xl space-y-6 shadow-2xl text-white scale-[1.03] md:scale-105 border-[6px] border-white ring-2 ring-primary/20">
-                    <h3 class="text-2xl font-bold">Pro Tier (Growth)</h3>
-                    <p class="text-blue-100">For active bakeries needing full control.</p>
-                    <div class="text-5xl font-extrabold">₹Premium <span class="text-base font-normal text-blue-100">/mo</span></div>
-                    
-                    <ul class="space-y-4 pt-4 text-blue-50">
-                        <li>✅ Everything in Free Tier</li>
-                        <li>✅ Recipe & Batch Production</li>
-                        <li>✅ Raw Material Inventory</li>
-                        <li>✅ Advanced GSTR-1 Analytics</li>
-                        <li>✅ Multi-User Account Management</li>
-                    </ul>
-                    
-                    <a href="https://wa.me/916238130456?text=Hi%20BakeLedger,%20I'm%20interested%20in%20pricing%20for%20the%20Pro%20Tier." 
-                       target="_blank"
-                       class="block w-full text-center bg-white text-primary font-bold px-6 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">
-                        Request Pro Pricing
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / About -->
-    <footer id="about" class="bg-white border-t border-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-5 text-center text-gray-600 space-y-4">
-            <div>
-                <span class="brand-bake">Bake</span><span class="brand-ledger">Ledger</span>
-            </div>
-            <p>Made in Kerala, India 🌴</p>
-            <p>Questions? Chat with us directly on WhatsApp: <a href="https://wa.me/916238130456" target="_blank" class="font-semibold text-primary hover:underline">916238130456</a></p>
-            <p class="text-sm pt-4">&copy; <span id="year"></span> BakeLedger. All rights reserved.</p>
+        <div class="max-w-7xl mx-auto px-5 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; <span id="year"></span> BakeLedger Technologies. All rights reserved.
         </div>
     </footer>
 
-    <!-- 📱 Mobile-only Sticky Bar -->
-    <div class="whatsapp-sticky-bar bg-light p-3 border-t border-gray-200">
-        <a href="https://app.bakeledger.in/signup" 
-           class="flex items-center justify-center gap-2 bg-primary text-white font-bold w-full p-4 rounded-xl text-lg shadow-lg">
-            <span>Create Free Account</span>
-        </a>
+    <!-- Policy Modals -->
+    <div id="privacy-modal" class="modal-backdrop fixed inset-0 z-50 items-center justify-center p-4">
+        <div class="bg-white text-dark max-w-2xl w-full max-h-[85vh] rounded-2xl p-6 overflow-y-auto shadow-2xl space-y-4">
+            <div class="flex justify-between items-center border-b pb-3">
+                <h3 class="text-xl font-bold">Privacy Policy</h3>
+                <button onclick="closeModal('privacy-modal')" class="text-gray-500 hover:text-black font-bold text-xl">&times;</button>
+            </div>
+            <div class="text-sm text-gray-600 space-y-3 leading-relaxed">
+				<p><strong>Effective Date:</strong> September 1, 2026</p>
+				<p>At BakeLedger (https://bakeledger.in), operated by BakeLedger Technologies, we are committed to protecting your personal and business data. This policy outlines how we collect, use, and safeguard your information.</p>
+				
+				<h4 class="font-bold text-dark">1. Information We Collect</h4>
+				<p>When you register or subscribe to BakeLedger, we collect details such as your business name, contact person name, email address, mobile number, operating address, and billing details.</p>
+				
+				<h4 class="font-bold text-dark">2. Payment Processing & Data Security</h4>
+				<p>We do not store complete credit card, debit card, or UPI credentials on our servers. All online payment transactions are processed securely through our RBI-authorized Payment Aggregator partner, <strong>Razorpay Software Private Limited</strong>, adhering to PCI-DSS compliance standards.</p>
+				
+				<h4 class="font-bold text-dark">3. Usage of Data</h4>
+				<p>Your data is strictly used to provide POS services, account management, issue subscription invoices, and provide customer support. We do not sell or rent your business data to third parties.</p>
+				
+				<h4 class="font-bold text-dark">4. Grievance & Contact Officer</h4>
+				<p>For any privacy or data concerns, contact our designated officer at <strong>support@bakeledger.in</strong> or phone <strong>+91 62381 30456</strong>.</p>
+			</div>
+        </div>
     </div>
 
-    <!-- Small Script to Update Copyright Year -->
+    <div id="terms-modal" class="modal-backdrop fixed inset-0 z-50 items-center justify-center p-4">
+        <div class="bg-white text-dark max-w-2xl w-full max-h-[85vh] rounded-2xl p-6 overflow-y-auto shadow-2xl space-y-4">
+            <div class="flex justify-between items-center border-b pb-3">
+                <h3 class="text-xl font-bold">Terms & Conditions</h3>
+                <button onclick="closeModal('terms-modal')" class="text-gray-500 hover:text-black font-bold text-xl">&times;</button>
+            </div>
+            <div class="text-sm text-gray-600 space-y-3 leading-relaxed">
+				<p><strong>Effective Date:</strong> September 1, 2026</p>
+				<p>Welcome to BakeLedger (https://bakeledger.in), operated by BakeLedger Technologies. By accessing or using our Cloud POS and Accounting software, you agree to comply with these Terms & Conditions.</p>
+				
+				<h4 class="font-bold text-dark">1. Service Scope & Subscriptions</h4>
+				<p>BakeLedger provides cloud-based billing, inventory, and ledger accounting services. Subscriptions under the Starter Plan are billed strictly on an annual basis at <strong>₹2,988/year</strong> (equivalent to ₹249/month) and grant access for 365 consecutive days unless canceled prior to the renewal date.</p>
+				
+				<h4 class="font-bold text-dark">2. User Accounts & Responsibilities</h4>
+				<p>You are responsible for maintaining the confidentiality of your account login credentials and for all billing/ledger activities performed under your account.</p>
+				
+				<h4 class="font-bold text-dark">3. Intellectual Property</h4>
+				<p>All software code, user interface designs, trademarks, and branding associated with BakeLedger are the exclusive intellectual property of BakeLedger Technologies.</p>
+				
+				<h4 class="font-bold text-dark">4. Governing Law & Jurisdiction</h4>
+				<p>These terms shall be governed by and construed in accordance with the laws of India. Any disputes arising shall be subject to the exclusive jurisdiction of the courts in Kerala, India.</p>
+			</div>
+        </div>
+    </div>
+
+    <div id="refund-modal" class="modal-backdrop fixed inset-0 z-50 items-center justify-center p-4">
+        <div class="bg-white text-dark max-w-2xl w-full max-h-[85vh] rounded-2xl p-6 overflow-y-auto shadow-2xl space-y-4">
+            <div class="flex justify-between items-center border-b pb-3">
+                <h3 class="text-xl font-bold">Refund & Cancellation Policy</h3>
+                <button onclick="closeModal('refund-modal')" class="text-gray-500 hover:text-black font-bold text-xl">&times;</button>
+            </div>
+            <div class="text-sm text-gray-600 space-y-3 leading-relaxed">
+				<p><strong>Effective Date:</strong> September 1, 2026</p>
+				<p>At BakeLedger, we strive to ensure a smooth subscription experience for bakery businesses.</p>
+				
+				<h4 class="font-bold text-dark">1. Subscription Cancellation</h4>
+				<p>You can cancel your active paid subscription at any time by logging into your account or emailing us at <strong>support@bakeledger.in</strong>. Upon cancellation, your service will remain active until the end of the current billing cycle.</p>
+				
+				<h4 class="font-bold text-dark">2. Refunds & Technical Errors</h4>
+				<p>Subscription payments made for the Starter Plan are non-refundable once activated. However, if you experience a technical error, duplicate charge, or unsuccessful transaction debit, please report it to us within 7 days at <strong>support@bakeledger.in</strong>.</p>
+				
+				<h4 class="font-bold text-dark">3. Refund Processing Timeline</h4>
+				<p>Verified refund requests or excess payment corrections will be processed within <strong>5 to 7 business days</strong>. All approved refunds will be credited back exclusively to the <strong>original payment source</strong> used during the transaction (e.g., original UPI ID, bank account, or debit/credit card).</p>
+			</div>
+        </div>
+    </div>
+
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
     </script>
 </body>
 </html>
