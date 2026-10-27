@@ -34,7 +34,6 @@
         
         .brand-bake { font-weight: 800; font-size: 1.5rem; color: #4b2c20; }
         .brand-ledger { font-weight: 300; font-size: 1.5rem; color: #4b2c20; }
-
         .modal-backdrop {
             display: none;
             background-color: rgba(0, 0, 0, 0.6);
@@ -45,7 +44,6 @@
     </style>
 </head>
 <body class="font-sans antialiased text-dark bg-white flex flex-col min-h-screen">
-
     <!-- Header / Navbar -->
     <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-40 border-b border-gray-100">
         <nav class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
@@ -149,38 +147,32 @@
                     <p class="text-3xl md:text-4xl font-extrabold text-dark mt-3">Complete Cash & Voucher Management</p>
                     <p class="text-lg text-gray-600 mt-4">Handle customer credit accounts, track supplier dues, and manage daily cash flow effortlessly.</p>
                 </div>
-
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
                     <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
                         <div class="w-12 h-12 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold text-xl">📥</div>
                         <h3 class="text-xl font-bold">Cash Receipts (CR Vouchers)</h3>
                         <p class="text-gray-600 text-sm">Record incoming customer payments against outstanding credit balances, advance sales, or daily cash settlements with voucher numbering.</p>
                     </div>
-
                     <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
                         <div class="w-12 h-12 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-bold text-xl">📤</div>
                         <h3 class="text-xl font-bold">Cash Payments (CP Vouchers)</h3>
                         <p class="text-gray-600 text-sm">Track cash paid out to raw material suppliers, vendor bills, daily bakery expenses, and petty cash directly against ledgers.</p>
                     </div>
-
                     <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
                         <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xl">📓</div>
                         <h3 class="text-xl font-bold">Journal Entries (Credit Sales)</h3>
                         <p class="text-gray-600 text-sm">Log credit sale transactions, non-cash adjustments, and customer ledger debits to maintain accurate double-entry ledger accounts.</p>
                     </div>
-
                     <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
                         <div class="w-12 h-12 rounded-full bg-yellow-100 text-yellow-800 flex items-center justify-center font-bold text-xl">👥</div>
                         <h3 class="text-xl font-bold">Ledger Master & Schedules</h3>
                         <p class="text-gray-600 text-sm">Organize accounts into Customer, Supplier, Expense, and Tax schedules with GSTIN tracking, addresses, and email details.</p>
                     </div>
-
                     <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
                         <div class="w-12 h-12 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xl">📊</div>
                         <h3 class="text-xl font-bold">Customer Outstanding Ledgers</h3>
                         <p class="text-gray-600 text-sm">View real-time credit balances per customer, track pending invoice payments, and export ledger statements for credit collection.</p>
                     </div>
-
                     <div class="bg-white p-8 rounded-2xl space-y-4 border border-gray-100 shadow-sm">
                         <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xl">📑</div>
                         <h3 class="text-xl font-bold">GST Outward & Tax Reports</h3>
@@ -190,13 +182,13 @@
             </div>
         </section>
 
-        <!-- Transparent Pricing & Grand Slam Offer Section -->
+        <!-- Pricing Section (Updated) -->
         <section id="pricing" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-5 space-y-12">
                 <div class="text-center max-w-2xl mx-auto">
-                    <p class="text-xs uppercase font-bold text-primary tracking-widest">Grand Slam Offer & Pricing</p>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-dark mt-3">The Local Bakery Automation Pass</h2>
-                    <p class="text-gray-600 mt-2">Get full access to all POS, voucher entries, and ledger accounting tools. Test completely free before upgrading.</p>
+                    <p class="text-xs uppercase font-bold text-primary tracking-widest">Simple Pricing</p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-dark mt-3">Start with Just ₹499</h2>
+                    <p class="text-gray-600 mt-2">Test free first. Then unlock unlimited billing for 2 full months at a very affordable price. WhatsApp digital bills work perfectly even without a printer.</p>
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
@@ -215,6 +207,7 @@
                                 <li class="flex items-center gap-2"><span>✅</span> Cash Receipts (CR) & Cash Payments (CP)</li>
                                 <li class="flex items-center gap-2"><span>✅</span> Journal Entries & Customer Credit Ledgers</li>
                                 <li class="flex items-center gap-2"><span>✅</span> USB & Bluetooth Thermal Printing</li>
+                                <li class="flex items-center gap-2"><span>✅</span> WhatsApp Digital Receipts</li>
                                 <li class="flex items-center gap-2"><span>✅</span> Day-End Summaries & All GST Reports</li>
                             </ul>
                         </div>
@@ -228,38 +221,45 @@
                         </div>
                     </div>
                     
-                    <!-- Grand Slam Annual Starter Plan -->
+                    <!-- 2-Month Plan (Replaces Annual) -->
                     <div class="bg-primary p-8 md:p-10 rounded-3xl space-y-6 text-white border-[6px] border-white ring-2 ring-primary/20 flex flex-col justify-between relative overflow-hidden shadow-2xl">
                         <div class="absolute top-4 right-4 bg-yellow-400 text-dark text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
-                            🔥 Founding Bakeries Offer
+                            🔥 Most Popular
                         </div>
                         <div>
-                            <span class="bg-blue-700 text-blue-100 text-xs font-semibold px-3 py-1 rounded-full uppercase">Unlimited Annual Pass</span>
-                            <h3 class="text-2xl font-bold mt-3">Starter Annual Plan</h3>
-                            <p class="text-blue-100 text-sm mt-1">Complete unlimited billing packed with executive onboarding bonuses.</p>
+                            <span class="bg-blue-700 text-blue-100 text-xs font-semibold px-3 py-1 rounded-full uppercase">Unlimited Access</span>
+                            <h3 class="text-2xl font-bold mt-3">2-Month Starter</h3>
+                            <p class="text-blue-100 text-sm mt-1">Full unlimited billing for 2 months at a very low price.</p>
                             <div class="flex items-baseline gap-2 mt-6">
-                                <span class="text-5xl font-extrabold">₹2,988</span>
-                                <span class="text-base font-normal text-blue-100">/year (₹249/mo)</span>
+                                <span class="text-5xl font-extrabold">₹499</span>
+                                <span class="text-base font-normal text-blue-100">for 2 months</span>
                             </div>
+                            <p class="text-blue-100 text-sm mt-1">(Only ₹249.50 per month)</p>
                             
                             <ul class="space-y-3 pt-6 text-blue-50 text-sm">
-                                <li class="flex items-start gap-2"><span>🚀</span> <div><strong>UNLIMITED Sales Bills per day</strong> (Zero restrictions)</div></li>
-                                <li class="flex items-start gap-2"><span>🎁</span> <div><strong>Bonus #1: Thermal Printer Quick-Sync Kit</strong> (Value ₹1,500 - Free Setup Support)</div></li>
-                                <li class="flex items-start gap-2"><span>🎁</span> <div><strong>Bonus #2: WhatsApp Receipt Swipe File</strong> (Value ₹1,000 - Customer Retention Templates)</div></li>
-                                <li class="flex items-start gap-2"><span>🎁</span> <div><strong>Bonus #3: Zero-Stress GST & Day-End Audit Pack</strong> (Value ₹1,500)</div></li>
+                                <li class="flex items-start gap-2"><span>🚀</span> <div><strong>UNLIMITED Sales Bills per day</strong> for 2 full months</div></li>
+                                <li class="flex items-start gap-2"><span>✅</span> <div>Full Touch POS + Accounting Features</div></li>
+                                <li class="flex items-start gap-2"><span>✅</span> <div>Customer Credit Ledgers & Vouchers</div></li>
+                                <li class="flex items-start gap-2"><span>✅</span> <div>Thermal Printer Support (USB/Bluetooth)</div></li>
+                                <li class="flex items-start gap-2"><span>💬</span> <div><strong>WhatsApp Digital Bills</strong> (works without printer)</div></li>
+                                <li class="flex items-start gap-2"><span>✅</span> <div>All GST Reports & Day-End Summaries</div></li>
                             </ul>
                         </div>
                         
                         <div class="mt-8 space-y-2">
                             <a href="https://app.bakeledger.in/signup" 
                                class="block w-full text-center bg-white text-primary font-bold px-6 py-3.5 rounded-full shadow-lg hover:bg-blue-50 transition-all">
-                                Upgrade to Annual Pass (₹2,988/yr)
+                                Start with ₹499 (2 Months)
                             </a>
-                            <p class="text-xs text-blue-100 text-center">Test on Free Tier first • Non-refundable upon upgrade</p>
+                            <p class="text-xs text-blue-100 text-center">Low risk • Full features • Easy to start</p>
                         </div>
                     </div>
                     
                 </div>
+
+                <p class="text-center text-sm text-gray-500 max-w-2xl mx-auto">
+                    No printer is required to begin. You can use WhatsApp digital receipts from day one. Thermal printer support is available whenever you need it.
+                </p>
             </div>
         </section>
 
@@ -304,22 +304,19 @@
                 </p>
                 <p class="text-xs text-gray-500">Made with ❤️ in Kerala, India 🌴</p>
             </div>
-
             <div class="space-y-2">
                 <h4 class="text-white font-semibold text-base mb-3">Quick Links</h4>
                 <p><a href="#features" class="hover:text-white transition-colors">POS Features</a></p>
                 <p><a href="#accounting" class="hover:text-white transition-colors">Vouchers & Accounting</a></p>
-                <p><a href="#pricing" class="hover:text-white transition-colors">Grand Slam Offer</a></p>
+                <p><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></p>
                 <p><a href="https://app.bakeledger.in/login" class="hover:text-white transition-colors">Account Login</a></p>
             </div>
-
             <div class="space-y-2">
                 <h4 class="text-white font-semibold text-base mb-3">Legal & Policies</h4>
                 <p><button onclick="openModal('privacy-modal')" class="hover:text-white text-left transition-colors">Privacy Policy</button></p>
                 <p><button onclick="openModal('terms-modal')" class="hover:text-white text-left transition-colors">Terms & Conditions</button></p>
                 <p><button onclick="openModal('refund-modal')" class="hover:text-white text-left transition-colors">Refund & Cancellation Policy</button></p>
             </div>
-
             <div class="space-y-2">
                 <h4 class="text-white font-semibold text-base mb-3">Customer Support</h4>
                 <p class="text-xs"><strong>Email:</strong> bakeledger@gmail.com</p>
@@ -327,7 +324,6 @@
                 <p class="text-xs text-gray-500 mt-2">Payments securely processed via Razorpay Payment Gateway.</p>
             </div>
         </div>
-
         <div class="max-w-7xl mx-auto px-5 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
             &copy; <span id="year"></span> BakeLedger Technologies. All rights reserved.
         </div>
@@ -370,10 +366,10 @@
                 <p>Welcome to BakeLedger (https://bakeledger.in), operated by BakeLedger Technologies. By accessing or using our Cloud POS and Accounting software, you agree to comply with these Terms & Conditions.</p>
                 
                 <h4 class="font-bold text-dark">1. Service Scope & Free Evaluation Tier</h4>
-                <p>BakeLedger provides a permanent Free Tier allowing up to <strong>10 sales bills per day forever</strong>. Users are encouraged and required to utilize this free tier to fully test, evaluate, and verify that the application meets all operational requirements before purchasing a paid plan.</p>
+                <p>BakeLedger provides a permanent Free Tier allowing up to <strong>10 sales bills per day forever</strong>. Users are encouraged to utilize this free tier to fully test and evaluate the application before purchasing a paid plan.</p>
                 
                 <h4 class="font-bold text-dark">2. Subscriptions & Non-Refundability</h4>
-                <p>Paid subscriptions under the Starter Annual Plan are billed at <strong>₹2,988/year</strong> and grant unlimited daily billing access for 365 consecutive days. Because complete evaluation capability is provided via the free tier prior to purchase, all paid subscription purchases are final, non-cancellable, and non-refundable.</p>
+                <p>Paid subscriptions under the <strong>2-Month Starter Plan</strong> are billed at <strong>₹499 for 2 months</strong> and grant unlimited daily billing access for 60 consecutive days. Because complete evaluation capability is provided via the free tier prior to purchase, all paid subscription purchases are final, non-cancellable, and non-refundable.</p>
                 
                 <h4 class="font-bold text-dark">3. User Accounts & Responsibilities</h4>
                 <p>You are responsible for maintaining the confidentiality of your account login credentials and for all billing/ledger activities performed under your account.</p>
@@ -398,7 +394,7 @@
                 <p>BakeLedger offers a permanent <strong>Free Tier that permits processing up to 10 sales bills per day forever</strong>. All users are expected to use this free option to thoroughly test the software, printer integrations, and features to ensure full suitability for their business before upgrading.</p>
                 
                 <h4 class="font-bold text-dark">2. No Cancellation & No Refund Policy</h4>
-                <p>Because every user has full opportunity to test and verify the system using the Free Tier prior to payment, <strong>paid subscription plans (₹2,988/year) cannot be cancelled mid-term and are strictly non-refundable</strong> once purchased.</p>
+                <p>Because every user has full opportunity to test and verify the system using the Free Tier prior to payment, <strong>paid subscription plans (₹499 for 2 months) cannot be cancelled mid-term and are strictly non-refundable</strong> once purchased.</p>
                 
                 <h4 class="font-bold text-dark">3. Technical Payment Errors</h4>
                 <p>In cases of verified technical payment errors—such as a duplicate payment debit or a failed transaction charge—please notify us within 7 days at <strong>bakeledger@gmail.com</strong>. Verified double-debits will be corrected and credited back to the original payment source within <strong>5 to 7 business days</strong>.</p>
@@ -408,12 +404,10 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-
         function openModal(id) {
             document.getElementById(id).classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-
         function closeModal(id) {
             document.getElementById(id).classList.remove('active');
             document.body.style.overflow = 'auto';
@@ -421,4 +415,3 @@
     </script>
 </body>
 </html>
-
